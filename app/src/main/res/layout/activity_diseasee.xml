@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/d_main"
+    android:padding="16dp"
+    android:background="@drawable/bg_farmer_vector"
+    tools:context=".ProductActivity">
+
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/productTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Disease That affect crops"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#1976D2"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchProductBar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Search products..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:background="@drawable/search_bar_bg"
+        android:textSize="16sp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/productTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Scrollable List -->
+    <ScrollView
+        android:id="@+id/productScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/searchProductBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/productList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Pesticides -->
+            <LinearLayout
+                android:id="@+id/cardPesticides"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_delete"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#D32F2F" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Blight"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Herbicides -->
+            <LinearLayout
+                android:id="@+id/cardHerbicides"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_rotate"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#795548" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Root Rot"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Fertilizers -->
+            <LinearLayout
+                android:id="@+id/cardFertilizers"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_help"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#978C8C" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Powdery Mildew"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Compost -->
+            <LinearLayout
+                android:id="@+id/cardCompost"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#62A925" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Leaf Spot"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Rust"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#A0522D" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Rust"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Downy_mildew"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_gallery"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#065880" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Downy Mildew"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Anthracnose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_manage"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#616161" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Anthracnose"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/Canker"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_dialog_alert"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#C62828" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Canker"
+                    android:textSize="18sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="360dp"
+    android:height="640dp"
+    android:viewportWidth="360"
+    android:viewportHeight="640">
+
+    <!-- Sky -->
+    <path
+        android:fillColor="#C8E6FF"
+        android:pathData="M0,0 L360,0 L360,320 L0,320 Z" />
+
+    <!-- Hills -->
+    <path
+        android:fillColor="#A5D6A7"
+        android:pathData="M0,320 Q90,280 180,320 T360,320 L360,640 L0,640 Z" />
+
+    <!-- Ground -->
+    <path
+        android:fillColor="#81C784"
+        android:pathData="M0,400 Q90,370 180,400 T360,400 L360,640 L0,640 Z" />
+</vector>

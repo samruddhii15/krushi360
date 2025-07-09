@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_farmer_vector"
+    android:padding="16dp"
+    tools:context=".scheme">
+
+    <!-- Title -->
+    <TextView
+        android:id="@+id/schemeTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Schemes for Farmers"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="#4CAF50"
+        android:textAlignment="center"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="24dp" />
+
+    <!-- Search Bar -->
+    <EditText
+        android:id="@+id/searchBar"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Search scheme..."
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:drawableStart="@android:drawable/ic_menu_search"
+        android:background="@drawable/search_bar_bg"
+        android:textSize="16sp"
+        android:inputType="text"
+        app:layout_constraintTop_toBottomOf="@id/schemeTitle"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Scrollable List -->
+    <ScrollView
+        android:id="@+id/schemeScroll"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@id/searchBar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <LinearLayout
+            android:id="@+id/schemeList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="8dp">
+
+            <!-- Scheme Card 1 -->
+            <LinearLayout
+                android:id="@+id/scheme1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_dialog_info"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#4CAF50" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="PM-KISAN Samman Nidhi"
+                    android:textSize="16sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Scheme Card 2 -->
+            <LinearLayout
+                android:id="@+id/scheme2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_info_details"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#4CAF50" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Soil Health Card Scheme"
+                    android:textSize="16sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Scheme Card 3 -->
+            <LinearLayout
+                android:id="@+id/scheme3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/scheme_card_bg"
+                android:padding="12dp"
+                android:layout_marginBottom="12dp"
+                android:elevation="4dp"
+                android:clickable="true"
+                android:focusable="true">
+
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@android:drawable/ic_menu_agenda"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginEnd="12dp"
+                    app:tint="#4CAF50" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Pradhan Mantri Fasal Bima Yojana"
+                    android:textSize="16sp"
+                    android:textColor="#2E7D32"
+                    android:textStyle="bold"
+                    android:layout_gravity="center_vertical" />
+            </LinearLayout>
+
+            <!-- Add more cards similarly -->
+
+        </LinearLayout>
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

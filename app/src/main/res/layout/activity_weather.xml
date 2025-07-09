@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backimg2"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_horizontal">
+
+        <TextView
+            android:id="@+id/headerText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🌤️ Live Farm Weather"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#03A90A"
+            android:layout_marginBottom="16dp" />
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="8dp"
+            android:layout_marginBottom="16dp"
+            android:backgroundTint="#FFFFFF">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:id="@+id/dateTimeText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🕒 Last Updated: --"
+                    android:textSize="14sp"
+                    android:textColor="#757575"
+                    android:layout_marginBottom="8dp"/>
+
+                <TextView
+                    android:id="@+id/locationText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📍 Location: Fetching..."
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:textColor="#424242" />
+
+                <TextView
+                    android:id="@+id/weatherText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="☀️ Weather: Loading..."
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#616161" />
+
+                <TextView
+                    android:id="@+id/futureForecastText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔮 In 1 Hour: --"
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#009688" />
+
+                <TextView
+                    android:id="@+id/soilMoistureText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌱 Soil Moisture: Loading..."
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#616161" />
+
+                <TextView
+                    android:id="@+id/windText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💨 Wind Speed: Loading..."
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#616161" />
+
+                <TextView
+                    android:id="@+id/humidityText"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="💧 Humidity: Loading..."
+                    android:textSize="16sp"
+                    android:layout_marginTop="8dp"
+                    android:textColor="#616161" />
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+            android:id="@+id/refreshButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔄 Refresh Weather"
+            android:backgroundTint="#4CAF50"
+            android:textColor="#FFFFFF"
+            android:padding="12dp"
+            android:layout_marginTop="12dp" />
+    </LinearLayout>
+</ScrollView>

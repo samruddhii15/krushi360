@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "984241271756",
+    "firebase_url": "https://krushi360-ab904-default-rtdb.firebaseio.com",
+    "project_id": "krushi360-ab904",
+    "storage_bucket": "krushi360-ab904.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:984241271756:android:0f879863def1fb5b7a2369",
+        "android_client_info": {
+          "package_name": "com.example.farmerapp"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkqi5UozhafV9KhHkhEIxJjtcpMjAMT1g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
